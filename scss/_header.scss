@@ -1,0 +1,148 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $bg;
+  z-index: $z1;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  margin-left: -$medium;
+  padding: $small $medium;
+
+  img {
+    width: 60px;
+  }
+}
+
+.site-nav-btn {
+  display: block;
+  margin-right: -$medium;
+  padding: $large $medium;
+  cursor: pointer;
+
+  img {
+    width: 22px;
+    height: 18px;
+  }
+}
+
+#site-nav-btn {
+  display: none;
+
+  &:checked ~ .site-nav {
+    display: block;
+  }
+}
+
+.site-nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid $line;
+  z-index: $z2;
+
+  &__item {
+    border-bottom: 1px solid $line;
+    padding: 0 $medium;
+    background-color: #fff;
+    color: $gray3;
+
+    &:first-child,
+    &:hover {
+      color: $coral;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    padding: $base 0;
+    word-break: keep-all;
+  }
+}
+
+.talk-btn {
+  display: none;
+}
+
+@media screen and (min-width:768px) {
+  .logo {
+    img {
+      width: 120px;
+    }
+  }
+
+  .site-nav-btn {
+    display: none;
+  }
+  .site-nav {
+    display: flex;
+    position: relative;
+    border: none;
+    width: auto;
+
+    &__item {
+      position: relative;
+      border: none;
+      background-color: transparent;
+      padding: 0 $medium;
+
+      &:first-child .site-nav__link::before,
+      &:hover .site-nav__link::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% + 15px);
+        height: 3px;
+        background-color: $coral;
+      }
+    }
+
+    &__link {
+      position: relative;
+      padding: $grand 0;
+    }
+  }
+}
+
+@media screen and (min-width:1200px) {
+  
+  .talk-btn {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: $base $medium;
+    border-radius: 25px;
+    background-color: $brown;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 25px;
+      border-top: 5px solid $brown;
+      border-left: 5px solid $brown;
+      border-bottom: 5px solid transparent;
+      border-right: 5px solid transparent;
+    }
+    &::after {
+      content: '@업드라이브';
+      color: $yellow;
+      font-size: $ft-s;
+      margin-left: $small;
+    }
+  }
+  
+}
