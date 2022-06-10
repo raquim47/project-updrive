@@ -1,0 +1,144 @@
+.visual {
+  background-color: $bg;
+  
+  &__inner {
+    position: relative;
+    margin-top: 78px;
+    padding-bottom: 200px;
+    overflow: hidden;
+  }
+
+  &__img1 {
+    position: absolute;
+    right: $large;
+    bottom: $medium;
+    width: 250px;
+  }
+
+  &__img2 {
+    position: absolute;
+    right: 250px;
+    bottom: $large;
+    width: 140px;
+  }
+  &__deco1,
+  &__deco2,
+  &__deco3,
+  &__deco4,
+  &__deco5,
+  &__deco6 {
+    display: none;
+  }
+}
+
+.title-area {
+  padding: $base 0;
+
+  strong {
+    color: $coral;
+    font-size: $ft-l;
+    font-weight: 400;  
+  }
+
+  h2 {
+    padding-top: $small;
+    font-size: $ft-xxl;
+    font-weight: 500;
+  }
+}
+
+
+@media screen and (min-width:768px) {
+  .visual {
+    &__inner {
+      margin-top: 124px;
+      padding-bottom: 400px;
+    }
+
+    &__img1 {
+      width: 400px;
+      right: $grand;
+    }
+
+    &__img2 {
+      right: 400px;
+    }
+
+    &__deco1,
+    &__deco2,
+    &__deco3,
+    &__deco4,
+    &__deco5,
+    &__deco6 {
+      display: block;
+      position: absolute;
+    }
+    
+    &__deco1 {
+      top: 5%;
+      left: 40%;
+      animation: rotate 4s ease-in-out infinite;
+    }
+    &__deco2 {
+      top: 20%;
+      right: 10%;
+      animation: rotate 7s ease-in-out infinite;
+    }
+    &__deco3 {
+      top: 37%;
+      left: -4%;
+      animation: updown 3s ease-in-out infinite;
+    }
+    &__deco4 {
+      top: 45%;
+      left: 30%;
+      animation: updown 3s ease-in-out infinite;
+    }
+    &__deco5 {
+      bottom: 10%;
+      left: 45%;
+      animation: updown 2s ease-in-out infinite;
+    }
+    &__deco6 {
+      bottom: 25%;
+      left: 15%;
+      animation: rotate 1.2s ease-in-out infinite;
+    }
+  }
+
+  .title-area {
+  
+    strong {
+      font-size: $ft-xl;
+    }
+  
+    h2 {
+      font-size: $ft-xxxl;
+    }
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .visual {
+    &__img1 {
+      width: 500px;
+    }
+
+    &__img2 {
+      width: 200px;
+      right: 500px;
+    }
+  }
+}
+
+@keyframes rotate {
+  50% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes updown {
+  50% {
+    transform: translateY(20px);
+  }
+}
