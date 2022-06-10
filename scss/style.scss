@@ -1,5 +1,7 @@
-@import './root';
-@import './varialbe';
+@import './base/./root';
+@import './base/./varialbe';
 
-@import './header';
-@import './section01';
+
+@import './layout/./header';
+@import './layout/./section01';
+@import './layout/./section02';

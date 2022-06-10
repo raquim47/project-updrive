@@ -3,9 +3,37 @@
   padding: 0 $large;
 }
 
+.title-area {
+  padding: $base 0;
+
+  strong {
+    color: $coral;
+    font-size: $ft-l;
+    font-weight: 400;  
+  }
+
+  h2 {
+    padding-top: $small;
+    font-size: $ft-xxl;
+    font-weight: 500;
+  }
+}
+
 @media screen and (min-width:768px) {
   .container {
     padding: 0 $grand;
+  }
+
+  .title-area {
+  
+    strong {
+      font-weight: 500;
+      font-size: $ft-xl;
+    }
+  
+    h2 {
+      font-size: $ft-xxxl;
+    }
   }
 }
 

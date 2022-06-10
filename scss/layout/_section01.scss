@@ -31,21 +31,7 @@
   }
 }
 
-.title-area {
-  padding: $base 0;
 
-  strong {
-    color: $coral;
-    font-size: $ft-l;
-    font-weight: 400;  
-  }
-
-  h2 {
-    padding-top: $small;
-    font-size: $ft-xxl;
-    font-weight: 500;
-  }
-}
 
 
 @media screen and (min-width:768px) {
@@ -75,8 +61,8 @@
     }
     
     &__deco1 {
-      top: 5%;
-      left: 40%;
+      top: 6%;
+      left: 45%;
       animation: rotate 4s ease-in-out infinite;
     }
     &__deco2 {
@@ -103,17 +89,6 @@
       bottom: 25%;
       left: 15%;
       animation: rotate 1.2s ease-in-out infinite;
-    }
-  }
-
-  .title-area {
-  
-    strong {
-      font-size: $ft-xl;
-    }
-  
-    h2 {
-      font-size: $ft-xxxl;
     }
   }
 }
